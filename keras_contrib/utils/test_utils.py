@@ -182,7 +182,7 @@ def unpack_singleton(x):
 
 if keras.__name__ == 'keras':
     is_tf_keras = False
-elif keras.__name__ == 'tensorflow.keras':
+elif 'tensorflow' in keras.__name__:
     is_tf_keras = True
 else:
     raise KeyError('Cannot detect if using keras or tf.keras.')
