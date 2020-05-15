@@ -3,12 +3,8 @@ from setuptools import find_packages
 import os
 
 
-if os.environ.get('USE_TF_KERAS', None) == '1':
-    name = 'tf_keras_contrib'
-    install_requires = []
-else:
-    name = 'keras_contrib'
-    install_requires = ['keras']
+name = 'tf_keras_contrib'
+install_requires = []
 
 setup(name=name,
       version='2.0.8',
